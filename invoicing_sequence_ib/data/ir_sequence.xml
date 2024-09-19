@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="seq_move_entry_monthly" model="ir.sequence">
+        <field name="name">Monthly Move Entry Sequence</field>
+        <field name="code">monthly.move.entry.sequence</field>
+        <field name="prefix">%(year)s/%(month)s/</field>
+        <field name="padding">4</field>
+        <field name="implementation">no_gap</field>
+    </record>
+</odoo>
