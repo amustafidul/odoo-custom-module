@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_report_subs_con" model="ir.actions.report">
+       <field name="name">Subscription Contract</field>
+       <field name="model">account.move</field>
+       <field name="report_type">qweb-pdf</field>
+       <field name="report_name">qweb_report_ib.report_subs_con</field>
+       <field name="report_file">qweb_report_ib.report_subs_con</field>
+       <field name="binding_model_id" ref="account.model_account_move"/>
+       <field name="binding_type">report</field>
+    </record>
+</odoo>

@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_subs_con">
+       <t t-call="web.html_container">
+           <t t-foreach="docs" t-as="o">
+               <t t-call="web.basic_layout">
+                   <div class="page">
+                       <div style="page-break-before: always;">
+                           <div style="border: 1px solid black; padding: 10px; background-color: #154c79;">
+                               <b><center>KONTRAK BERLANGGANAN LAYANAN SOLUSI CLOUD</center></b><br/>
+                               <b><center>CLOUD SOLUTION SERVICE SUBSCRIPTION CONTRACT</center></b><br/>
+                               <b><center>NO. 033/SC-EAD/IAAAS/BD-AA/IV/2024</center></b>
+                            </div>
+                           <br/>
+                           <div>
+                                <input type="checkbox" id="new_contract" checked="checked"/> Kontrak BARU / NEW Contract<br/>
+                                <input type="checkbox" id="renewal"/> PEMBARUAN Kontrak / RENEWAL Contract<br/>
+                                <input type="checkbox" id="change"/> PERMOHONAN PERUBAHAN Kontrak / CHANGE Contract Request
+                            </div>
+                           <br/>
+                           <table class="table table-bordered" style="table-layout: fixed">
+                                <!-- Header -->
+                                <tr>
+                                    <th colspan="6" style="border: 1px solid black; text-align: center; background-color: #d3d3d3; font-weight: bold;">
+                                        INFORMASI PERUSAHAAN / COMPANY INFORMATION
+                                    </th>
+                                </tr>
+
+                                <!-- Nama Perusahaan -->
+                                <tr>
+                                    <td colspan="6" style="border: 1px solid black; width: 100%;">
+                                        Nama Perusahaan / Company Name: PT <span style="border-bottom: 1px dashed black; display: inline-block; width: 80%;"></span>
+                                    </td>
+                                </tr>
+
+                                <!-- Alamat, Kota, dan Provinsi -->
+                                <tr>
+                                    <td rowspan="2" style="border: 1px solid black; width: 20%;">
+                                        Alamat / Address:
+                                    </td>
+                                    <td rowspan="2" colspan="3" style="border: 1px solid black; width: 40%;">
+                                        <span style="border-bottom: 1px dashed black; display: inline-block; width: 100%;"></span>
+                                    </td>
+                                    <td style="border: 1px solid black; width: 20%;">
+                                        Kota / City:
+                                    </td>
+                                    <td style="border: 1px solid black; width: 20%;">
+                                        <span style="border-bottom: 1px dashed black; display: inline-block; width: 100%;"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Provinsi / Province:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black; display: inline-block; width: 100%;"></span>
+                                    </td>
+                                </tr>
+
+                                <!-- Kode Pos dan No. Telepon -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        No. Telepon Perusahaan / Company Phone Number:
+                                    </td>
+                                    <td colspan="3" style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black; display: inline-block; width: 100%;"></span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        Kode Pos / Postal Code:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black; display: inline-block; width: 100%;"></span>
+                                    </td>
+                                </tr>
+
+                                <!-- Alamat Penagihan dan NPWP dalam satu baris -->
+                                <tr>
+                                    <td colspan="4" style="border: 1px solid black;">
+                                        Alamat Penagihan / Billing Address: <span style="border-bottom: 1px dashed black; display: inline-block; width: 80%;">sama dengan alamat perusahaan</span>
+                                    </td>
+                                    <td colspan="2" style="border: 1px solid black;">
+                                        NPWP / Tax ID: <span style="border-bottom: 1px dashed black; display: inline-block; width: 100%;"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <table class="table table-bordered" style="table-layout: fixed">
+                                <!-- Header -->
+                                <tr>
+                                    <th colspan="4" style="border: 1px solid black; text-align: center; background-color: #d3d3d3; font-weight: bold;">
+                                        INFORMASI PELANGGAN / CUSTOMER INFORMATION
+                                    </th>
+                                </tr>
+
+                                <!-- Sub Header -->
+                                <tr>
+                                    <th style="border: 1px solid black; text-align: center; width: 20%;">
+                                        Contact
+                                    </th>
+                                    <th style="border: 1px solid black; text-align: center; width: 26%;">
+                                        Person in Charge (PIC)
+                                    </th>
+                                    <th style="border: 1px solid black; text-align: center; width: 27%;">
+                                        Technical
+                                    </th>
+                                    <th style="border: 1px solid black; text-align: center; width: 27%;">
+                                        Billing
+                                    </th>
+                                </tr>
+
+                                <!-- Nama -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Nama
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Jabatan -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Jabatan
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Hp -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Hp
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Email -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Email
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <table class="table table-bordered" style="table-layout: fixed">
+                                <!-- Header -->
+                                <tr>
+                                    <th colspan="4" style="border: 1px solid black; text-align: center; background-color: #d3d3d3; font-weight: bold;">
+                                        INFORMASI PENYEDIA LAYANAN / SERVICE PROVIDER INFORMATION
+                                    </th>
+                                </tr>
+
+                                <!-- Sub Header -->
+                                <tr>
+                                    <th style="border: 1px solid black; text-align: center; width: 20%;">
+                                        Contact
+                                    </th>
+                                    <th style="border: 1px solid black; text-align: center; width: 26%;">
+                                        Contact Person
+                                    </th>
+                                    <th style="border: 1px solid black; text-align: center; width: 27%;">
+                                        Technical
+                                    </th>
+                                    <th style="border: 1px solid black; text-align: center; width: 27%;">
+                                        Billing
+                                    </th>
+                                </tr>
+
+                                <!-- Nama -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Nama
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        Achjandi Mirza Ramadhan
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        Helpdesk
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        Mutiara Yuang
+                                    </td>
+                                </tr>
+
+                                <!-- Jabatan -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Jabatan
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        Business Development
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        -
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        Finance Division
+                                    </td>
+                                </tr>
+
+                                <!-- Hp -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Hp
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        085777766136
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        0877-1888-8045
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        0857-7182-0456
+                                    </td>
+                                </tr>
+
+                                <!-- Email -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Email
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        miza@eranyacloud.com
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        support@eranyacloud.com
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        finance@eranyacloud.com
+                                    </td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <table class="table table-bordered" style="table-layout: fixed">
+                                <!-- Header -->
+                                <tr>
+                                    <th colspan="4" style="border: 1px solid black; text-align: center; background-color: #d3d3d3; font-weight: bold;">
+                                        INFORMASI PERIODE LAYANAN / SERVICE PERIOD INFORMATION
+                                    </th>
+                                </tr>
+
+                                <!-- Tanggal Layanan Dimulai dan Periode Layanan -->
+                                <tr>
+                                    <td style="border: 1px solid black; width: 40%;">
+                                        Tanggal Layanan Dimulai / <br/> Service Commencement (Start) Date:
+                                    </td>
+                                    <td style="border: 1px solid black; width: 30%;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black; width: 15%;">
+                                        Periode Layanan / <br/> Service Period:
+                                    </td>
+                                    <td style="border: 1px solid black; width: 15%;">
+                                        12 months
+                                    </td>
+                                </tr>
+
+                                <!-- Tanggal Layanan Berakhir dan Saat Layanan Berakhir -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Tanggal Layanan Berakhir / <br/> Expiration (End) Date:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">.......................</span>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        Saat Layanan Berakhir / <br/> To Do On Expiration Date:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <table style="width: 100%; border: none;">
+                                            <tr>
+                                                <td style="border: none;">
+                                                    <input type="checkbox" checked="true"/>
+                                                    PEMBARUAN OTOMATIS / AUTO RENEWAL
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="border: none;">
+                                                    <input type="checkbox"/>
+                                                    Untuk dikonfirmasi / Subject to be confirmed
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <table class="table table-bordered" style="table-layout: fixed">
+                                <!-- Header -->
+                                <tr>
+                                    <th colspan="2" style="border: 1px solid black; text-align: center; background-color: #d3d3d3; font-weight: bold;">
+                                        INFORMASI BERLANGGANAN / SUBSCRIPTION INFORMATION
+                                    </th>
+                                </tr>
+
+                                <!-- Pilihan Pembayaran -->
+                                <tr>
+                                    <td colspan="2" style="border: 1px solid black; width: 55%;">
+                                        Pilihan Pembayaran / Payment Options: Monthly
+                                    </td>
+                                </tr>
+
+                                <!-- Total Nilai Kontrak -->
+                                <tr>
+                                    <td style="border: 1px solid black; width: 40%;">
+                                        Total Nilai Kontrak / Total Contract Value:
+                                    </td>
+                                    <td style="border: 1px solid black; width: 60%;">
+                                        <span style="border-bottom: 1px dashed black;">........................</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Jumlah Langganan Bulanan -->
+                                <tr>
+                                    <td style="border: 1px solid black; width: 40%;">
+                                        Jumlah Langganan Bulanan / Monthly Subscription Amount:
+                                    </td>
+                                    <td style="border: 1px solid black; width: 60%;">
+                                        <span style="border-bottom: 1px dashed black;">........................</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Jumlah Langganan Tahunan -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Jumlah Langganan Tahunan / Yearly Subscription Amount:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">........................</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Jumlah Tagihan Satu Kali -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Jumlah tagihan satu kali / One time charge Amount:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">........................</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Tagihan Bulan 1, 2, 3 -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Tagihan / Charging Bulan 1:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">........................</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Tagihan / Charging Bulan 2:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">........................</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Tagihan / Charging Bulan 3:
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span style="border-bottom: 1px dashed black;">........................</span>
+                                    </td>
+                                </tr>
+                            </table>
+                           <br/>
+                            <p>
+                                <b>*Harga diatas belum termasuk PPN 11% / </b>
+                                <b>Price above is excluded 11% tax.</b><br/>
+                                <b>** Apabila tanggal dimulainya layanan diatas tanggal 1, maka angka penagihan bulanan pada periode awal &amp; akhir kontrak akan dihitung secara prorata.</b>
+                            </p>
+                           <br/>
+                           <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                                <tr>
+                                    <th colspan="2" style="border: 1px solid black; text-align: center; background-color: #d3d3d3; font-weight: bold;">
+                                        IAAS SERVICE
+                                    </th>
+                                </tr>
+
+                                <!-- Quote Reference -->
+                                <tr>
+                                    <td colspan="2" style="border: 1px solid black; text-align: left; padding: 5px;">
+                                        <b>Quote Ref. #</b> 126/BD-AS/IAAS/III/2024
+                                    </td>
+                                </tr>
+
+                                <!-- Lampiran -->
+                                <tr>
+                                    <td colspan="2" style="border: 1px solid black; text-align: center; padding: 10px;">
+                                        <span style="border-bottom: 1px dashed black;">Lampiran penawaran/PO yang sudah disetujui</span>
+                                    </td>
+                                </tr>
+
+                                <!-- Syarat dan Ketentuan -->
+                                <tr>
+                                    <td style="border: 1px solid black; width: 50%; vertical-align: top; padding: 5px;">
+                                        <b>Syarat &amp; Ketentuan:</b>
+                                        <ul style="list-style-type: none; padding-left: 0;">
+                                            <li>- Harga unit <b>belum termasuk</b> PPN 11%.</li>
+                                            <li>- Pembayaran setiap bulan pascabayar.</li>
+                                            <li>- Pembayaran menggunakan mata uang Indonesia (Rp).</li>
+                                            <li>- Nomor Rekening PT Era Awan Digital (Bank BCA) 539-5319199.</li>
+                                        </ul>
+                                    </td>
+
+                                    <!-- Terms & Conditions -->
+                                    <td style="border: 1px solid black; width: 50%; vertical-align: top; padding: 5px;">
+                                        <b><i>Terms &amp; Condition:</i></b>
+                                        <ul style="list-style-type: none; padding-left: 0;">
+                                            <li><i>- Unit price is <b>excluded VAT</b> 11%.</i></li>
+                                            <li><i>- Payment method is <b>monthly postpaid</b>.</i></li>
+                                            <li><i>- Payment should be in Indonesian currency (Rp).</i></li>
+                                            <li><i>- PT Era Awan Digital Remittance Account (BCA Bank) No: 539-5319199 (IDR).</i></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                                <!-- Header -->
+                                <tr>
+                                    <th colspan="4" style="border: 1px solid black; text-align: center; background-color: #d3d3d3; font-weight: bold;">
+                                        RINGKASAN KAPASITAS LAYANAN SOLUSI CLOUD / CLOUD SOLUTION SERVICES CAPACITY SUMMARY
+                                    </th>
+                                </tr>
+
+                                <!-- Sub Headers -->
+                                <tr>
+                                    <th style="border: 1px solid black; width: 25%; text-align: center;">
+                                        Awal / Starting
+                                    </th>
+                                    <th style="border: 1px solid black; width: 25%; text-align: center;">
+                                        Perubahan / Changes
+                                    </th>
+                                    <th style="border: 1px solid black; width: 25%; text-align: center;">
+                                        Saat ini / Current
+                                    </th>
+                                </tr>
+
+                                <!-- vCPU -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        vCPU: <span style="border-bottom: 1px dashed black;">.....</span> Core
+                                    </td>
+                                    <td style="border: 1px solid black;"></td>
+                                    <td style="border: 1px solid black;"></td>
+                                </tr>
+
+                                <!-- vRAM -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        vRAM: <span style="border-bottom: 1px dashed black;">.....</span> GB
+                                    </td>
+                                    <td style="border: 1px solid black;"></td>
+                                    <td style="border: 1px solid black;"></td>
+                                </tr>
+
+                                <!-- vDISK -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        vDISK: <span style="border-bottom: 1px dashed black;">.....</span> GB Standard
+                                    </td>
+                                    <td style="border: 1px solid black;"></td>
+                                    <td style="border: 1px solid black;"></td>
+                                </tr>
+
+                                <!-- Floating IP -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Floating IP: <span style="border-bottom: 1px dashed black;">.....</span> Unit
+                                    </td>
+                                    <td style="border: 1px solid black;"></td>
+                                    <td style="border: 1px solid black;"></td>
+                                </tr>
+
+                                <!-- Managed Service -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Managed Service: <span style="border-bottom: 1px dashed black;">.....</span> VM
+                                    </td>
+                                    <td style="border: 1px solid black;"></td>
+                                    <td style="border: 1px solid black;"></td>
+                                </tr>
+
+                                <!-- Backup Agent -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Backup Agent: <span style="border-bottom: 1px dashed black;">.....</span> VM
+                                    </td>
+                                    <td style="border: 1px solid black;"></td>
+                                    <td style="border: 1px solid black;"></td>
+                                </tr>
+
+                                <!-- Backup Storage -->
+                                <tr>
+                                    <td style="border: 1px solid black;">
+                                        Backup Storage: <span style="border-bottom: 1px dashed black;">.....</span> GB
+                                    </td>
+                                    <td style="border: 1px solid black;"></td>
+                                    <td style="border: 1px solid black;"></td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                                <!-- Header -->
+                                <tr>
+                                    <td style="text-align: center; font-weight: bold; font-size: 14px; border: 1px solid black;">
+                                        OTORISASI
+                                    </td>
+                                    <td style="text-align: center; font-weight: bold; font-size: 14px; border: 1px solid black;">
+                                        AUTHORIZATION
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- Kolom Kiri - Otorisasi -->
+                                    <td style="border: 1px solid black; width: 50%; padding: 5px; vertical-align: top;">
+                                        <ol type="a" style="padding-left: 15px;">
+                                            <li>Dalam Kontrak Berlangganan ini Pihak Pertama adalah PT Era Awan Digital dan Pihak Kedua adalah PT [Pelanggan].</li>
+                                            <li>Dengan ini, kami menandatangani dan mengonfirmasi bahwa informasi di dalam Kontrak ini benar, lengkap, dan akurat.</li>
+                                            <li>Kami sepenuhnya terikat pada syarat dan ketentuan dari layanan ini dan tidak ada perubahan tanpa persetujuan tertulis bersama.</li>
+                                            <li>Layanan ini tunduk pada Syarat dan Ketentuan yang tertulis dalam dokumen ini.</li>
+                                            <li>Kami menyetujui bahwa total biaya layanan adalah [nominal] dan diatur dalam kontrak ini.</li>
+                                            <li>Segala bentuk perubahan, pembatalan, atau amandemen kontrak ini harus disetujui secara tertulis oleh kedua belah pihak.</li>
+                                        </ol>
+                                    </td>
+
+                                    <!-- Kolom Kanan - Authorization -->
+                                    <td style="border: 1px solid black; width: 50%; padding: 5px; vertical-align: top;">
+                                        <ol type="a" style="padding-left: 15px;">
+                                            <li>In this Subscription Contract, the First Party is PT Era Awan Digital and the Second Party is PT [Client].</li>
+                                            <li>We, the undersigned below, hereby confirm that the information in this Contract is true, correct, and complete.</li>
+                                            <li>We are fully bound by the terms and conditions of this service, and no changes shall be made without mutual written agreement.</li>
+                                            <li>This service is subject to the Terms and Conditions written in this document.</li>
+                                            <li>We hereby agree that the total service fee is [amount] and governed in this Contract.</li>
+                                            <li>Any change, cancellation, or amendment of this contract must be mutually agreed upon in writing by both parties.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+
+                                <!-- Header - Gangguan dan Restitusi -->
+                                <tr>
+                                    <td style="text-align: center; font-weight: bold; font-size: 14px; border: 1px solid black; padding-top: 10px;">
+                                        1. GANGGUAN DAN RESTITUSI
+                                    </td>
+                                    <td style="text-align: center; font-weight: bold; font-size: 14px; border: 1px solid black; padding-top: 10px;">
+                                        1. DISTURBANCE AND RESTITUTION
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- Kolom Kiri - Gangguan dan Restitusi -->
+                                    <td style="border: 1px solid black; width: 50%; padding: 5px; vertical-align: top;">
+                                        <ol type="1" style="padding-left: 15px;">
+                                            <li>Jika terdapat gangguan pada layanan, Pihak Kedua harus melaporkan kepada Pihak Pertama sesegera mungkin.</li>
+                                            <li>Pihak Pertama akan menangani gangguan tersebut dalam waktu [durasi] setelah menerima pemberitahuan dari Pihak Kedua.</li>
+                                            <li>Pengajuan restitusi oleh Pihak Kedua akan dievaluasi oleh Pihak Pertama berdasarkan tingkat gangguan dan durasi.</li>
+                                            <li>Restitusi tidak berlaku jika gangguan disebabkan oleh kesalahan atau kelalaian dari Pihak Kedua.</li>
+                                            <li>Jika gangguan terjadi selama periode langganan, maka masa berlangganan akan diperpanjang sesuai dengan lamanya gangguan.</li>
+                                            <li>Pengaturan lebih lanjut terkait restitusi akan dijelaskan dalam Formulir Restitusi Layanan Cloud.</li>
+                                        </ol>
+                                    </td>
+
+                                    <!-- Kolom Kanan - Disturbance and Restitution -->
+                                    <td style="border: 1px solid black; width: 50%; padding: 5px; vertical-align: top;">
+                                        <ol type="1" style="padding-left: 15px;">
+                                            <li>In the event of disturbance in services, the Second Party shall report to the First Party as soon as possible.</li>
+                                            <li>The First Party will address the disturbance within [duration] after receiving notice from the Second Party.</li>
+                                            <li>Submission of restitution by the Second Party will be evaluated by the First Party based on the level and duration of the disturbance.</li>
+                                            <li>Restitution does not apply if the disturbance is caused by the negligence or fault of the Second Party.</li>
+                                            <li>If disturbance occurs during the subscription period, the subscription period will be extended accordingly based on the length of the disturbance.</li>
+                                            <li>Further arrangements related to restitution will be outlined in the Cloud Solution Service Restitution Form.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+
+                               <tr>
+                                    <td style="text-align: center; font-weight: bold; font-size: 14px; border: 1px solid black; padding-top: 10px;">
+                                        2. PENGAKHIRAN PERJANJIAN
+                                    </td>
+                                    <td style="text-align: center; font-weight: bold; font-size: 14px; border: 1px solid black; padding-top: 10px;">
+                                        2. TERMINATION OF AGREEMENT
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- Kolom Kiri - Gangguan dan Restitusi -->
+                                    <td style="border: 1px solid black; width: 50%; padding: 5px; vertical-align: top;">
+                                        <ol type="1" style="padding-left: 15px;">
+                                            <li>Dalam hal terjadi kelalaian dari pemenuhan kewajibannya sebagaimana diatur dalam perjanjian ini, dengan suatu pembuktian yang akurat maka Pihak lainnya dapat untuk setiap saat mengakhiri perjanjian ini dengan memberikan pemberitahuan secara tertulis kepada pihak lainnya selambat-lambatnya 30 (tiga puluh) hari sebelum tanggal pengakhiran yang ditetapkan</li>
+                                            <li>Pihak Pertama akan menangani gangguan tersebut dalam waktu [durasi] setelah menerima pemberitahuan dari Pihak Kedua.</li>
+                                            <li>Pengajuan restitusi oleh Pihak Kedua akan dievaluasi oleh Pihak Pertama berdasarkan tingkat gangguan dan durasi.</li>
+                                            <li>Restitusi tidak berlaku jika gangguan disebabkan oleh kesalahan atau kelalaian dari Pihak Kedua.</li>
+                                            <li>Jika gangguan terjadi selama periode langganan, maka masa berlangganan akan diperpanjang sesuai dengan lamanya gangguan.</li>
+                                            <li>Pengaturan lebih lanjut terkait restitusi akan dijelaskan dalam Formulir Restitusi Layanan Cloud.</li>
+                                        </ol>
+                                    </td>
+
+                                    <!-- Kolom Kanan - Disturbance and Restitution -->
+                                    <td style="border: 1px solid black; width: 50%; padding: 5px; vertical-align: top;">
+                                        <ol type="1" style="padding-left: 15px;">
+                                            <li>In the event of negligence in fulfilling its obligations as stipulated in this agreement, with accurate proof, the other party may at any time terminate this agreement by providing written notice to the other party no later than 30 (thirty) days prior to the specified termination date.</li>
+                                            <li>The First Party will address the disturbance within [duration] after receiving notice from the Second Party.</li>
+                                            <li>Submission of restitution by the Second Party will be evaluated by the First Party based on the level and duration of the disturbance.</li>
+                                            <li>Restitution does not apply if the disturbance is caused by the negligence or fault of the Second Party.</li>
+                                            <li>If disturbance occurs during the subscription period, the subscription period will be extended accordingly based on the length of the disturbance.</li>
+                                            <li>Further arrangements related to restitution will be outlined in the Cloud Solution Service Restitution Form.</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <table style="width: 100%; border-collapse: collapse;">
+                                <!-- Header Kota dan Tanggal -->
+                                <tr>
+                                    <td style="text-align: right; padding-right: 10px;">
+                                        Jakarta, <span style="border-bottom: 1px dashed black;">.........................</span> 2024
+                                    </td>
+                                </tr>
+
+                                <!-- Persetujuan oleh -->
+                                <tr>
+                                    <td style="text-align: center; padding-top: 20px; font-weight: bold;">
+                                        Disetujui oleh / Agreed by:
+                                    </td>
+                                </tr>
+
+                                <!-- Kolom PT dan Tanda Tangan -->
+                                <tr>
+                                    <!-- Kolom Kiri - PT Era Awan Digital -->
+                                    <td style="width: 50%; padding-top: 40px; text-align: left; vertical-align: top;">
+                                        <b>PT. ERA AWAN DIGITAL</b>
+                                        <br/><br/>
+                                        <span style="border-bottom: 1px dashed black;"></span>
+                                        <br/><br/>
+                                        Shaanee P. Harjani
+                                        <br/>
+                                        Direktur Utama
+                                        <br/>
+                                        <span style="border-bottom: 1px dashed black;"></span>
+                                    </td>
+
+                                    <!-- Kolom Kanan - PT Lain -->
+                                    <td style="width: 50%; padding-top: 40px; text-align: right; vertical-align: top;">
+                                        <b>PT [Nama Perusahaan]</b>
+                                        <br/><br/>
+                                        <span style="border-bottom: 1px dashed black;"></span>
+                                        <br/><br/>
+                                        [Nama Direktur]
+                                        <br/>
+                                        Direktur
+                                        <br/>
+                                        <span style="border-bottom: 1px dashed black;"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <h3>Lampiran 1 / Appendix 1</h3>
+
+                            <p><b>Cloud Solution Services</b></p>
+                            <p>EranyaCloud will deliver Cloud Solution as Services covering servers and network using virtualization technology.</p>
+                            <p>Our offering will be based on the following features:</p>
+
+                            <!-- Tabel Fitur -->
+                            <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                                <tr style="background-color: #d3d3d3;">
+                                    <th style="border: 1px solid black; padding: 5px;">BASIC FEATURE</th>
+                                    <th style="border: 1px solid black; padding: 5px;">SERVICE</th>
+                                </tr>
+
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Maximum VM Size</td>
+                                    <td style="border: 1px solid black; padding: 5px;">22 vCPU, 128GB vRAM, 16TB vHDD</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">High Availability (N+1)</td>
+                                    <td style="border: 1px solid black; padding: 5px;">YES</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Managed Firewall</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Optional</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Managed Service</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Optional</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">CPU</td>
+                                    <td style="border: 1px solid black; padding: 5px;">3 Ghz per vCPU (High Performance)</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Storage Platform</td>
+                                    <td style="border: 1px solid black; padding: 5px;">NVME</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Operating System</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Windows OS, Linux OS</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Self Service Portal</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Full Control</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Disk Performance</td>
+                                    <td style="border: 1px solid black; padding: 5px;">vDISK NVME - up to IOPS 1000</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Support</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Monday-Sunday 24 hours, Telephone (+62-877-18888045)<br/>Email: support@eranyacloud.com</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Network Allocation</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Up to 10 Network Interface, unlimited private IP</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Network Performance</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Domestic - 100Mbps average</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Protection</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Free Anti-DDoS</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Other Inclusions</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Free Internet Bandwidth<br/>1 Free Load Balancer<br/>1 Free Kubernetes</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Datacenter Location</td>
+                                    <td style="border: 1px solid black; padding: 5px;">DCI - Cibitung</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Disaster Recovery Location (Optional)</td>
+                                    <td style="border: 1px solid black; padding: 5px;">TBC</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Performance Guaranteed</td>
+                                    <td style="border: 1px solid black; padding: 5px;">YES</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Availability Guaranteed 99.9%</td>
+                                    <td style="border: 1px solid black; padding: 5px;">RPO: 30 Menit, RTO: 1 hour (operating system only)</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Cloud DR Services</td>
+                                    <td style="border: 1px solid black; padding: 5px;">Daily backup. Retention data depends on subscribed storage capacity</td>
+                                </tr>
+                            </table>
+
+                            <!-- Paragraf SLA -->
+                            <p style="padding-top: 20px;">
+                                Eranyacloud is very committed to the performance and the reliability of our platform, that we offer not only a series of strong SLAs, but also financial penalties should we ever breach the SLA.
+                            </p>
+                            <p>
+                                The SLA is related to the infrastructure availability (99.9%), its response time for service requests (15 minutes) and for DR offerings SLA for RTO&amp;RPO.
+                            </p>
+                            <p>
+                                Note that due to services being delivered over the public internet, the SLA for availability extends only to our border routers; issues with the delivery of internet packets upstream of our routers are excluded.
+                            </p>
+                           <br/>
+                           <!-- Title -->
+                            <h3>Role and Responsibilities - Standard Services</h3>
+                            <p>Eranyacloud will provide services as per following table, some responsibilities will rely on Customer side</p>
+
+                            <!-- Tabel Role dan Responsibility -->
+                            <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                                <!-- Header -->
+                                <tr style="background-color: #d3d3d3;">
+                                    <th style="border: 1px solid black; padding: 5px; text-align: left;">Service Scope</th>
+                                    <th colspan="2" style="border: 1px solid black; padding: 5px; text-align: center;">Role &amp; Responsibility</th>
+                                </tr>
+                                <tr style="background-color: #d3d3d3;">
+                                    <th style="border: 1px solid black; padding: 5px; text-align: left;">SOP Standard Public Cloud</th>
+                                    <th style="border: 1px solid black; padding: 5px; text-align: center;">Eranyacloud</th>
+                                    <th style="border: 1px solid black; padding: 5px; text-align: center;">Customer</th>
+                                </tr>
+
+                                <!-- Self Service Portal -->
+                                <tr style="background-color: #f7e6e6;">
+                                    <td colspan="3" style="border: 1px solid black; padding: 5px;"><b>Self Service Portal</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Create Account</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Managing Account (profiling Account)</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Any changes</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Any problem in account</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+
+                                <!-- Infrastructure -->
+                                <tr style="background-color: #f7e6e6;">
+                                    <td colspan="3" style="border: 1px solid black; padding: 5px;"><b>Infrastructure</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Configuration Cloud</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Maintenance Cloud</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Troubleshoot Cloud</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Monitoring Cloud</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Internet and Network Cloud</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Redundancy Cloud</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Multi region Cloud</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">SLA Era Cloud 99.9%</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Support 24x7</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+
+                                <!-- Deployment Infrastructure -->
+                                <tr style="background-color: #f7e6e6;">
+                                    <td colspan="3" style="border: 1px solid black; padding: 5px;"><b>Self Services Cloud</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Deployment Infrastructure</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Creating virtual machine</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Managing virtual machine</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Creating Private Network</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Managing Private Network</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Creating Load Balancer</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Managing Load Balancer</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Creating Kubernetes Cluster</td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 1px solid black; padding: 5px;">Managing Kubernetes Cluster</td>
+                                    <td style="border: 1px solid black; text-align: center;"></td>
+                                    <td style="border: 1px solid black; text-align: center;">V</td>
+                                </tr>
+                            </table>
+                           <br/>
+                           <h2>Service Level Request</h2>
+                            <h3>Service Request Severity</h3>
+                            <p>
+                              Eranyacloud provide SLR (Service Level Request) for Compute Cloud Services as per following scheme:
+                            </p>
+
+                            <table class="table table-bordered" style="width: 100%; border-collapse: collapse;">
+                              <thead>
+                                <tr style="background-color: #fbe9e7;">
+                                  <th>Severity Level</th>
+                                  <th>Description</th>
+                                  <th>Response Time</th>
+                                  <th>Target time workaround Solution</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td style="background-color: #fde0dc;"><b>Severity 1<br />(Urgent)</b></td>
+                                  <td>Complete loss of infrastructure connectivity or server functionality.</td>
+                                  <td>within 15 minutes</td>
+                                  <td>24 hour</td>
+                                </tr>
+                                <tr>
+                                  <td style="background-color: #fde0dc;"><b>Severity 2<br />(High)</b></td>
+                                  <td>Degradation of performance for any infrastructure component that has a material adverse effect on the site’s performance</td>
+                                  <td>within 15 minutes</td>
+                                  <td>48 hour</td>
+                                </tr>
+                                <tr>
+                                  <td style="background-color: #fde0dc;"><b>Severity 3<br />(Normal)</b></td>
+                                  <td>Permasalah melibatkan program dari pihak ketiga dimana penyelesaiannya harus melakukan koordinasi dengan banyak pihak</td>
+                                  <td>within 15 minutes</td>
+                                  <td>72 hour</td>
+                                </tr>
+                                <tr>
+                                  <td style="background-color: #fde0dc;"><b>Severity 4<br />(Low)</b></td>
+                                  <td>Pertanyaan mengenai fitur dan product</td>
+                                  <td>within 15 minutes</td>
+                                  <td>N/A</td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                            <p style="margin-top: 15px;">
+                              <i>Note:</i><br/>
+                              Eranyacloud will respond starting from the initial notification (phone and email) or receipt of the ticket.
+                            </p>
+                           <div style="page-break-before: always;">
+                               <h3><u><center>KONTRAK BERLANGGANAN LAYANAN SOLUSI CLOUD</center></u></h3>
+                               <h3 style="padding-top:-7px;"><center><i>CLOUD SOLUTION SERVICE SUBSCRIPTION CONTRACT</i></center></h3>
+                           </div>
+                           <br/>
+                           <div>
+                               <p>
+                                   Eranyacloud tolerable unplanned downtime per year (365 days) : 8 hours 41 minutes 38 seconds
+                                    (equal to SLA 99.9% per year)
+                               </p>
+                               <p>
+                                   Komponen kegagalan melingkupi infrastruktur (Server) yang mengalami downtime tak terduga
+                                    yang terhitung dari komponen CPU, RAM &amp; Disk.
+                               </p>
+                               <p>
+                                   Penyimpangan dari SLA yang ditetapkan dalam komitmen akan diberikan kedalam Restitusi SLA
+                                    berupa Point pinalti eranyacloud, dengan kompensasi ke pada Customer menggunakan
+                                    Rumus/Formula berikut:
+                               </p>
+                                <center><img src='/qweb_report_ib/static/src/img/penalty_formula.png' style="max-height: 86px;"/></center>
+                               <p>
+                                   Penalty = jumlah SLA kredit yang akan diberikan<br/>
+                                    Resolution time = Total waktu perbaikan, dalam satuan jam<br/>
+                                   Service Price = Harga layanan yang terkena impact downtime
+                               </p>
+                               <p>
+                                   SLA Credit akan di berikan setiap pada Invoice Akhir bulan daripada Kontrak Kerjasama antara
+                                    Customer dan Eranyacloud. Credit point tersebut akan berkurang pada invoice bulan selanjut nya
+                               </p>
+                               <p>
+                                   Max credit provided: 5% from the total of contract.
+                               </p>
+                               <p>
+                                   Escalation Matrix &amp; Timetable
+                               </p>
+                               <p>
+                                   Eranyacloud will provide responsibilities of chart about escalation Solusi Cloud service. Below tree
+                                    is escalation process:
+                               </p>
+                               <p>
+                                   If the normal support process does not produce the desired results (see service request severity
+                                    section), or if the problem has changed in priority, the problem can be escalated as follows:<br/>
+                                   1. First contact the Helpdesk Technical Support staff who are working on your problem and
+                                        request that the priority of the problem is escalated.<br/>
+                                   2. You may request to speak with Cloud Operation Manager if additional escalation is
+                                        required.<br/>
+                                   3. You may request to speak with VP Operation if continued escalation is required.
+                               </p>
+                               <center><img src='/qweb_report_ib/static/src/img/flow.png'/></center>
+                           </div>
+                       </div>
+                   </div>
+               </t>
+           </t>
+       </t>
+    </template>
+</odoo>
