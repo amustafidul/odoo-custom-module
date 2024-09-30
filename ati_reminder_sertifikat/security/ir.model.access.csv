@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ati_reminder_sertifikat,access_ati_reminder_sertifikat,model_ati_reminder_sertifikat,,1,1,1,1
+access_ati_reminder_sertifikat_history,access_ati_reminder_sertifikat_history,model_ati_reminder_sertifikat_history,,1,1,1,1
+access_ati_doc_type_sertif,access_ati_doc_type_sertif,model_ati_doc_type_sertif,,1,1,1,1

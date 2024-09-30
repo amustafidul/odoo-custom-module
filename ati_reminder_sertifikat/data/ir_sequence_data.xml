@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="seq_reminder_sertifikat" model="ir.sequence">
+        <field name="name">Reminder Sertifikat</field>
+        <field name="code">ati.reminder.sertifikat</field>
+        <field name="prefix">SERTIF/</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

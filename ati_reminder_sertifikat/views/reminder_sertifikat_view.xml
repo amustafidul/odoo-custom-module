@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_reminder_sertif_form" model="ir.ui.view">
+        <field name="name">ati.reminder.sertifikat.form</field>
+        <field name="model">ati.reminder.sertifikat</field>
+        <field name="arch" type="xml">
+            <form string="Reminder Sertifikat">
+                <header>
+                    <field name="is_renewal" invisible="1"/>
+                    <field name="is_renewal_draft" invisible="1"/>
+                    <field name="is_renewal_confirm" invisible="1"/>
+                    <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"
+                            attrs="{'invisible': ['|', ('state','not in',['draft']),
+                            ('is_renewal','=',True)]}"/>
+                    <button name="action_renewal" string="Renewal" type="object" class="oe_highlight"
+                            attrs="{'invisible': ['|', ('state','not in',['expired']),
+                            ('is_renewal','=',False),
+                            ('is_renewal_draft','=',False)]}"/>
+                    <button name="action_renewal_confirm" string="Confirm Renewal" type="object" class="oe_highlight"
+                            attrs="{'invisible': ['|', ('state','not in',['draft']),
+                            ('is_renewal','=',False),
+                            ('is_renewal_confirm','=',False)]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,expired"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="sertifikat_number" string="Sertifikat Number" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                            <field name="document_type" attrs="{'readonly': [('state','not in',['draft'])]}" invisible="1"/>
+                            <field name="document_type_id" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                            <field name="document_number"/>
+                            <field name="document_name" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                        </group>
+                        <group>
+                            <field name="start_date" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                            <field name="end_date" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                            <field name="department_id" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                            <field name="employee_id" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                            <field name="attachment_files" attrs="{'readonly': [('state','not in',['draft'])]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Renewal History">
+                            <field name="reminder_sertifikat_history_ids" attrs="{'readonly': [('state','not in',['draft'])]}">
+                                <tree create="0" edit="0" delete="1">
+                                    <field name="document_type" invisible="1"/>
+                                    <field name="document_type_id"/>
+                                    <field name="document_number"/>
+                                    <field name="expiration_date"/>
+                                    <field name="renewal_date"/>
+                                    <field name="new_start_date"/>
+                                    <field name="new_end_date"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_reminder_sertif_tree" model="ir.ui.view">
+        <field name="name">ati.reminder.sertifikat.tree</field>
+        <field name="model">ati.reminder.sertifikat</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="document_type" invisible="1"/>
+                <field name="document_type_id"/>
+                <field name="document_number"/>
+                <field name="document_name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_reminder_sertifikat" model="ir.actions.act_window">
+        <field name="name">Reminder Sertifikat</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ati.reminder.sertifikat</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No reminder sertifikat found.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="reminder_sertif_menu_root"
+        name="Reminder Sertifikat"
+        web_icon="ati_reminder_sertifikat,static/img/certificate-svgrepo-com.svg"
+        active="True"
+        action="action_reminder_sertifikat"
+        sequence="99">
+    </menuitem>
+</odoo>
