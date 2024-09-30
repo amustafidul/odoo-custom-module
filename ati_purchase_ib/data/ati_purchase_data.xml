@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- New custom sequences for purchase.order -->
+    <record id="custom_seq_purchase_order" model="ir.sequence">
+        <field name="name">Purchase Order Custom</field>
+        <field name="code">purchase.order.custom</field>
+        <field name="suffix">/PO/ARK</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+    <!-- New custom sequences for purchase.request -->
+    <record id="custom_seq_purchase_request" model="ir.sequence">
+        <field name="name">Purchase Request Custom</field>
+        <field name="code">purchase.request.custom</field>
+        <field name="suffix">/PR/ARK</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

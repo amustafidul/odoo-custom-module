@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_dimension_filed,access_purchase_dimension_filed,model_purchase_dimension_filed,,1,1,1,1
+access_good_receipt_report,access_good_receipt_report,model_good_receipt_report,,1,1,1,1

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="ati_purchase_ib_form_inherit" model="ir.ui.view">
+        <field name="name">ati.purchase.ib.form.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="department_id"/>
+                <field name="product_categ_ids" widget="many2many_tags"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                <field name="business_name" string="Business Type" invisible="1"/>
+                <field name="business_type_id" string="Business Type" required="1" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+                <field name="vessel_name" invisible="1"/>
+                <field name="account_vessel_id" required="1" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+                <field name="project_name" invisible="1"/>
+                <field name="account_project_id" required="1" options="{'no_quick_create': True, 'no_create_edit' : True}"/>
+                <field name="mother_vessel_name" required="0" options="{'no_quick_create': True, 'no_create_edit' : True}" invisible="1"/>
+                <field name="commenced_loading_port" required="0" options="{'no_quick_create': True, 'no_create_edit' : True}" invisible="1"/>
+                <field name="completed_discharge_port" required="0" options="{'no_quick_create': True, 'no_create_edit' : True}" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                <field name="product_categ_ids" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="attributes">
+                <attribute name="domain">[('purchase_ok', '=', True),
+                    ('categ_id', 'in', product_categ_ids or []),
+                    '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)
+                ]</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="ati_purchase_request_ib_form_inherit" model="ir.ui.view">
+        <field name="name">ati.purchase.request.ib.form.inherit</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request.view_purchase_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='assigned_to']" position="after">
+                <field name="department_id" attrs="{'readonly': [('is_editable','=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
