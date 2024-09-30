@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem name="Keuangan"
+        id="menu_keuangan"
+        web_icon="agp_keuangan_ib,static/description/icons8-bonds-48.png"
+        sequence="56">
+        <menuitem id="parent_menu_board_keuangan_pendapatan" name="Pendapatan" sequence="1">
+            <menuitem id="parent_menu_board_keuangan_pendapatan_invoice" name="Invoice" action="action_move_out_invoice_type_ib" sequence="1"/>
+            <menuitem id="parent_menu_board_keuangan_pendapatan_invoice_scf" name="Invoice - SCF" action="action_move_out_invoice_type_ib" sequence="1"/>
+        </menuitem>
+        <menuitem id="parent_menu_board_keuangan" name="Keuangan" action="action_move_out_invoice_type_ib" sequence="2"/>
+        <menuitem id="parent_menu_board_keuangan_anggaran" name="Anggaran" action="action_move_out_invoice_type_ib" sequence="3"/>
+    </menuitem>
+</odoo>
